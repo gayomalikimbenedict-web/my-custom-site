@@ -57,8 +57,8 @@ export function Footer() {
             </ul>
             <p className="mt-6 font-semibold text-white">Contact</p>
             <ul className="mt-3 space-y-2">
-              <li><a href="mailto:info@yourcompany.com" className={linkClass}>info@yourcompany.com</a></li>
-              <li><a href="tel:+15550199" className={linkClass}>+1 555 0199</a></li>
+              <li><a href="mailto:info@yourcompany.com" className={linkClass}>kimbenedictg@gmail.com</a></li>
+              <li><a href="tel:+15550199" className={linkClass}>+639974653945</a></li>
             </ul>
           </div>
 
