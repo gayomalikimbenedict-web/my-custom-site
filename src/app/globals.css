@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: oklch(0.46 0.12 152);
+  --color-surface: oklch(0.985 0.006 260);
+  --color-muted: oklch(0.52 0.02 260);
+  --color-foreground: oklch(0.2 0.015 260);
+  --radius-card: 0.5rem;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: page-enter 400ms ease-out both;
+}
+
+[data-reveal-state] {
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+[data-reveal-state="hidden"] {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+[data-reveal-state="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+
+  [data-reveal-state] {
+    transition: none;
+  }
+
+  [data-reveal-state="hidden"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .custom-cursor {
+    display: none;
+    transition: none;
+  }
+}
+
+@media (scripting: none) {
+  [data-reveal-state="hidden"] {
+    opacity: 1;
+    transform: none;
+  }
+}
